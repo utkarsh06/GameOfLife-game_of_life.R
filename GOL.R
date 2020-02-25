@@ -4,8 +4,11 @@ apply_rules <- function(matr){
  
  population <- matr[1,1] + matr[1,2]+ matr[1,3]+ matr[2,1]+ matr[2,3]+ matr[3,1]+ matr[3,2]+ matr[3,3]
  #waprint(population)
- if(population == 3 | population == 2){
+ if(population == 3){
    return(1)
+ }
+ else if(population == 2){
+   return(matr[2,2])
  }
  else{ return(0)
  }
@@ -42,5 +45,5 @@ game_of_life <- function(N,M,p,nGen){
 
 
 
-game_of_life(250,250,.95,40)
+game_of_life(150,150,.9,40)
 
